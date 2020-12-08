@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "81768626614",
+    "project_id": "the-fleischer-foundation",
+    "storage_bucket": "the-fleischer-foundation.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:81768626614:android:f39ea950d911dbc9852917",
+        "android_client_info": {
+          "package_name": "com.example.fleischerfoundation"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "81768626614-bvss9ghe4up1j27rkhrv2i7sgh7m15vq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCpP2mH93qUggBuvqQJ-U04puupQSilRM4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "81768626614-bvss9ghe4up1j27rkhrv2i7sgh7m15vq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
