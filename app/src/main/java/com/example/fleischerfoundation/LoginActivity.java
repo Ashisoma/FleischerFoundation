@@ -30,7 +30,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     @BindView(R.id.emailEditText) EditText mEmailEditText;
     @BindView(R.id.passwordEditText)
     EditText mPasswordEditText;
-    @BindView(R.id.registerTextView) TextView mRegisterTextView;
+    @BindView(R.id.forgotTextView) TextView mForgotTextView;
 
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthListener;
@@ -45,6 +45,9 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
         registerText.setOnClickListener(this);
         mLoginButton.setOnClickListener(this);
+        mForgotTextView.setOnClickListener(this);
+
+
         mAuth = FirebaseAuth.getInstance();
         mAuthListener = new FirebaseAuth.AuthStateListener(){
             @Override
@@ -77,6 +80,10 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         }
         if (v == mLoginButton){
             loginWithPassword();
+        }
+        if (v == mForgotTextView){
+            Intent intent = new Intent(LoginActivity.this, ForgotPassword.class);
+            startActivity(intent);
         }
     }
 

@@ -142,7 +142,7 @@ public class CreateAccountActivity extends AppCompatActivity implements View.OnC
                         public void onComplete(@NonNull Task<Void> task) {
                             if(task.isSuccessful()){
                                 Toast.makeText(CreateAccountActivity.this, "Registration Successful", Toast.LENGTH_LONG).show();
-                                Intent intent = new Intent(CreateAccountActivity.this, DashboardActivity.class);
+                                Intent intent = new Intent(CreateAccountActivity.this, DashboardActivity    .class);
                                 startActivity(intent);
                                 finish();
                             }else {
