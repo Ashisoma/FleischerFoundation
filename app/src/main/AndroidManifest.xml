@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.FleischerFoundation">
-        <activity android:name=".ForgotPassword"></activity>
+        <activity android:name=".ChatActivity"></activity>
+        <activity android:name=".ForgotPassword" />
         <activity android:name=".DashboardActivity" />
         <activity android:name=".CreateAccountActivity" />
         <activity android:name=".LoginActivity" />
