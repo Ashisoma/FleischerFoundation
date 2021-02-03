@@ -25,7 +25,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class CreateAccountActivity extends AppCompatActivity implements View.OnClickListener {
+public class StudentCreateAccountActivity extends AppCompatActivity implements View.OnClickListener {
 
     private FirebaseAuth mAuth;
     @BindView(R.id.nameEditText) EditText mNameEditText;
@@ -59,7 +59,7 @@ public class CreateAccountActivity extends AppCompatActivity implements View.OnC
     @Override
     public void onClick(View v) {
         if(v == mLoginTextView){
-            Intent intent = new Intent(CreateAccountActivity.this, LoginActivity.class);
+            Intent intent = new Intent(StudentCreateAccountActivity.this, LoginActivity.class);
             intent.setFlags(intent.FLAG_ACTIVITY_NEW_TASK | intent.FLAG_ACTIVITY_CLEAR_TASK);
             startActivity(intent);
             finish();
@@ -141,18 +141,18 @@ public class CreateAccountActivity extends AppCompatActivity implements View.OnC
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
                             if(task.isSuccessful()){
-                                Toast.makeText(CreateAccountActivity.this, "Registration Successful", Toast.LENGTH_LONG).show();
-                                Intent intent = new Intent(CreateAccountActivity.this, DashboardActivity    .class);
+                                Toast.makeText(StudentCreateAccountActivity.this, "Registration Successful", Toast.LENGTH_LONG).show();
+                                Intent intent = new Intent(StudentCreateAccountActivity.this, DashboardActivity    .class);
                                 startActivity(intent);
                                 finish();
                             }else {
-                                Toast.makeText(CreateAccountActivity.this, "Registration failed failed.", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(StudentCreateAccountActivity.this, "Registration failed failed.", Toast.LENGTH_SHORT).show();
                             }
 
                         }
                     });
                 }else {
-                    Toast.makeText(CreateAccountActivity.this,"Registration failed failed.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(StudentCreateAccountActivity.this,"Registration failed failed.", Toast.LENGTH_SHORT).show();
                 }
                 mAuthProgressDialog.dismiss();
             }
@@ -168,7 +168,7 @@ public class CreateAccountActivity extends AppCompatActivity implements View.OnC
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                 final FirebaseUser user = firebaseAuth.getCurrentUser();
                 if (user != null){
-                    Intent intent = new Intent(CreateAccountActivity.this, LoginActivity.class);
+                    Intent intent = new Intent(StudentCreateAccountActivity.this, LoginActivity.class);
                     intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                     startActivity(intent);
                     finish();

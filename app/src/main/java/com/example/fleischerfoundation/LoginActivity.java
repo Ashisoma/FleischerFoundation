@@ -7,7 +7,6 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -74,7 +73,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     public void onClick(View v) {
 
         if(v == registerText) {
-            Intent intent = new Intent(LoginActivity.this, CreateAccountActivity.class);
+            Intent intent = new Intent(LoginActivity.this, WelcomeActivity.class);
             startActivity(intent);
             finish();
         }

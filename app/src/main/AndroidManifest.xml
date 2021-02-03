@@ -9,9 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.FleischerFoundation">
-        <activity android:name=".ForgotPassword"></activity>
+        <activity android:name=".DonorCreateAccountActivity"></activity>
+        <activity android:name=".MentorCreateAccountActivity" />
+        <activity android:name=".WelcomeActivity" />
+        <activity android:name=".ForgotPassword" />
         <activity android:name=".DashboardActivity" />
-        <activity android:name=".CreateAccountActivity" />
+        <activity android:name=".StudentCreateAccountActivity" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
