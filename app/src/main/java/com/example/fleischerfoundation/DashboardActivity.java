@@ -3,7 +3,6 @@ package com.example.fleischerfoundation;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -27,7 +26,7 @@ public class DashboardActivity extends AppCompatActivity {
     private DatabaseReference reference;
     private String userId;
 
-    @BindView(R.id.goToChat) ImageView goToChat;
+    @BindView(R.id.goToEmail) ImageView goToChat;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

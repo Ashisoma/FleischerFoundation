@@ -14,8 +14,8 @@ import butterknife.ButterKnife;
 public class WelcomeActivity extends AppCompatActivity implements View.OnClickListener{
 
     @BindView(R.id.button) Button mMentor;
-    @BindView(R.id.button2) EditText mStudent;
-    @BindView(R.id.button3) EditText mDonor;
+    @BindView(R.id.button2) Button mStudent;
+    @BindView(R.id.button3) Button mDonor;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,12 +32,12 @@ public class WelcomeActivity extends AppCompatActivity implements View.OnClickLi
         if(view == mMentor) {
             Intent intent = new Intent(WelcomeActivity.this, MentorCreateAccountActivity.class);
             startActivity(intent);
-            finish();
+//            finish();
         }
         if (view == mStudent){
             Intent intent = new Intent(WelcomeActivity.this, StudentCreateAccountActivity.class);
             startActivity(intent);
-            finish();
+//            finish();
         }
         if (view== mDonor){
             Intent intent = new Intent(WelcomeActivity.this, DonorCreateAccountActivity.class);

@@ -25,11 +25,12 @@ import butterknife.ButterKnife;
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener{
     @BindView(R.id.registerTextView) TextView registerText;
     @BindView(R.id.logIn)
-    Button mLoginButton;
+    TextView mLoginButton;
     @BindView(R.id.emailEditText) EditText mEmailEditText;
     @BindView(R.id.passwordEditText)
     EditText mPasswordEditText;
     @BindView(R.id.forgotTextView) TextView mForgotTextView;
+    @BindView(R.id.passwordLoginButton) Button mLoginBtn;
 
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthListener;
@@ -45,6 +46,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         registerText.setOnClickListener(this);
         mLoginButton.setOnClickListener(this);
         mForgotTextView.setOnClickListener(this);
+        mLoginBtn.setOnClickListener(this);
 
 
         mAuth = FirebaseAuth.getInstance();
@@ -83,6 +85,10 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         if (v == mForgotTextView){
             Intent intent = new Intent(LoginActivity.this, ForgotPassword.class);
             startActivity(intent);
+        }
+        if ( v== mLoginBtn ){
+            loginWithPassword();
+            finish();
         }
     }
 
