@@ -24,8 +24,8 @@ import butterknife.ButterKnife;
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener{
     @BindView(R.id.registerTextView) TextView registerText;
-    @BindView(R.id.logIn)
-    TextView mLoginButton;
+//    @BindView(R.id.logIn)
+//    TextView mLoginButton;
     @BindView(R.id.emailEditText) EditText mEmailEditText;
     @BindView(R.id.passwordEditText)
     EditText mPasswordEditText;
@@ -44,7 +44,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         ButterKnife.bind(this);
 
         registerText.setOnClickListener(this);
-        mLoginButton.setOnClickListener(this);
+//        mLoginButton.setOnClickListener(this);
         mForgotTextView.setOnClickListener(this);
         mLoginBtn.setOnClickListener(this);
 
@@ -77,10 +77,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         if(v == registerText) {
             Intent intent = new Intent(LoginActivity.this, WelcomeActivity.class);
             startActivity(intent);
-            finish();
-        }
-        if (v == mLoginButton){
-            loginWithPassword();
+//            finish();
         }
         if (v == mForgotTextView){
             Intent intent = new Intent(LoginActivity.this, ForgotPassword.class);
@@ -88,7 +85,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         }
         if ( v== mLoginBtn ){
             loginWithPassword();
-            finish();
+
         }
     }
 

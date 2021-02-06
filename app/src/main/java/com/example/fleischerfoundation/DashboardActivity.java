@@ -3,12 +3,15 @@ package com.example.fleischerfoundation;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.fleischerfoundation.helper.UserHelper;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -27,6 +30,7 @@ public class DashboardActivity extends AppCompatActivity {
     private String userId;
 
     @BindView(R.id.goToEmail) ImageView goToChat;
+    @BindView(R.id.registerTextView) TextView mRegisterTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +41,16 @@ public class DashboardActivity extends AppCompatActivity {
         user = FirebaseAuth.getInstance().getCurrentUser();
 
         reference = FirebaseDatabase.getInstance().getReference("users");
+
+        mRegisterTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                        Intent webIntent = new Intent(Intent.ACTION_VIEW,
+                                Uri.parse("https://docs.google.com/forms/d/e/1FAIpQLSdF2gEGQQo40lQ6pHlvnOpRA5MSeWy6cILNb1pCf2rm7GVozQ/viewform"));
+                        startActivity(webIntent);
+                    }
+        });
 
         goToChat.setOnClickListener(new View.OnClickListener() {
             @Override

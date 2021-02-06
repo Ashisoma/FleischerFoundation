@@ -15,6 +15,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.fleischerfoundation.helper.UserHelper;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -125,7 +126,7 @@ public class StudentCreateAccountActivity extends AppCompatActivity implements V
         mAuthProgressDialog = new ProgressDialog(this);
         mAuthProgressDialog.setTitle("Loading...");
         mAuthProgressDialog.show();
-        mAuthProgressDialog.setMessage("Authenticating with Firebase...");
+        mAuthProgressDialog.setMessage("Authenticating ...");
         mAuthProgressDialog.setCancelable(false);
 
 

@@ -58,16 +58,13 @@ public class ForgotPassword extends AppCompatActivity implements View.OnClickLis
             return;
         }
 
-        mAuth.sendPasswordResetEmail(email).addOnCompleteListener(new OnCompleteListener<Void>() {
-            @Override
-            public void onComplete(@NonNull Task<Void> task) {
-                if (task.isSuccessful()){
-                    Toast.makeText(ForgotPassword.this, "Check your email to rest your password",Toast.LENGTH_LONG).show();
-                }
-                else {
-                    Toast.makeText(ForgotPassword.this, "Try again! Something went wrong.",Toast.LENGTH_LONG).show();
+        mAuth.sendPasswordResetEmail(email).addOnCompleteListener(task -> {
+            if (task.isSuccessful()){
+                Toast.makeText(ForgotPassword.this, "Check your email to reset your password",Toast.LENGTH_LONG).show();
+            }
+            else {
+                Toast.makeText(ForgotPassword.this, "Try again! Something went wrong.",Toast.LENGTH_LONG).show();
 
-                }
             }
         });
     }

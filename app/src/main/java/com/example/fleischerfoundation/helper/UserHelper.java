@@ -1,4 +1,4 @@
-package com.example.fleischerfoundation;
+package com.example.fleischerfoundation.helper;
 
 public class UserHelper {
 

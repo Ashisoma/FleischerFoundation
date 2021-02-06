@@ -119,6 +119,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_below="@+id/listMode"
+            android:id="@+id/register"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp">
 
@@ -132,18 +133,19 @@
 
             <TextView
                 android:layout_width="wrap_content"
+                android:id="@+id/registerTextView"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="16dp"
                 android:layout_toRightOf="@id/icon_register"
-                android:text="Listing"
+                android:text="Register on the web"
                 android:textColor="#202020"
                 android:textSize="20dp"/>
 
             <ImageView
                 android:layout_width="16dp"
                 android:layout_height="16dp"
-                android:id="@+id/goToList"
+                android:id="@+id/goToRegister"
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
                 android:src="@drawable/arrow_dark">
