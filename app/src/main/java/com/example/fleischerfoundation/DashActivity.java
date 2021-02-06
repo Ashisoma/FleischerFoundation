@@ -56,11 +56,12 @@ public class DashActivity extends AppCompatActivity {
         }
     }
 
+
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
         switch (menuItem.getItemId()) {
             case R.id.nav_home: break; case R.id.nav_bus:
-                Intent intent = new Intent(DashActivity.this, Bus.class);
+                Intent intent = new Intent(DashActivity.this, DashboardActivity.class);
                 startActivity(intent);
                 break;
             case R.id.nav_login: menu.findItem(R.id.nav_logout).setVisible(true);
@@ -74,9 +75,11 @@ public class DashActivity extends AppCompatActivity {
             case R.id.nav_share: Toast.makeText(this, "Share", Toast.LENGTH_SHORT).show(); break;
         }
         drawerLayout.closeDrawer(GravityCompat.START); return true;
+
+        menu = navigationView.getMenu();
+        menu.findItem(R.id.nav_logout).setVisible(false);
+        menu.findItem(R.id.nav_profile).setVisible(false);
+
     }
 
-    menu = navigationView.getMenu();
-    menu.findItem(R.id.nav_logout).setVisible(false);
-    menu.findItem(R.id.nav_profile).setVisible(false);
 }
