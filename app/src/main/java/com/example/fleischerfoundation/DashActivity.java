@@ -11,12 +11,13 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
 
-public class DashActivity extends AppCompatActivity {
+public class DashActivity extends AppCompatActivity implements View.OnClickListener, NavigationView.OnNavigationItemSelectedListener {
 
     //Variables
     DrawerLayout drawerLayout;
@@ -34,16 +35,23 @@ public class DashActivity extends AppCompatActivity {
         /*---------------------Hooks------------------------*/
         drawerLayout=findViewById(R.id.drawer_layout);
         navigationView=findViewById(R.id.nav_view);
-        textView=findViewById(R.id.textView);
+       // textView=findViewById(R.id.textView);
         toolbar=findViewById(R.id.toolbar);
 
+        /// toolbar
+
+        setSupportActionBar(toolbar);
+
+        // navigation
         navigationView.bringToFront();
-        ActionBarDrawerToggle toggle=new
-                ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.navigation_drawer_open,R.string.navigation_drawer_close);
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.navigation_drawer_open,R.string.navigation_drawer_close);
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
+
         navigationView.setNavigationItemSelectedListener(this);
-        navigationView.setCheckedItem(R.id.nav_home);
+
+
+//        navigationView.setCheckedItem(R.id.nav_home);
     }
 
     @Override
@@ -51,8 +59,8 @@ public class DashActivity extends AppCompatActivity {
         if(drawerLayout.isDrawerOpen(GravityCompat.START)){
             drawerLayout.closeDrawer(GravityCompat.START);
         }
-        else
-        {super.onBackPressed();
+        else {
+            super.onBackPressed();
         }
     }
 
@@ -76,10 +84,14 @@ public class DashActivity extends AppCompatActivity {
         }
         drawerLayout.closeDrawer(GravityCompat.START); return true;
 
-        menu = navigationView.getMenu();
-        menu.findItem(R.id.nav_logout).setVisible(false);
-        menu.findItem(R.id.nav_profile).setVisible(false);
+//        menu = navigationView.getMenu();
+//        menu.findItem(R.id.nav_logout).setVisible(false);
+//        menu.findItem(R.id.nav_profile).setVisible(false);
 
     }
 
+    @Override
+    public void onClick(View v) {
+
+    }
 }

@@ -27,7 +27,6 @@ public class DashboardActivity extends AppCompatActivity {
 
     private FirebaseUser user;
     private DatabaseReference reference;
-    private String userId;
 
     @BindView(R.id.goToEmail) ImageView goToChat;
     @BindView(R.id.registerTextView) TextView mRegisterTextView;
@@ -61,7 +60,7 @@ public class DashboardActivity extends AppCompatActivity {
             }
         });
 
-        userId = user.getUid();
+        String userId = user.getUid();
 
         final TextView greeting = findViewById(R.id.greeting);
         final TextView fullName = findViewById(R.id.accountName);
