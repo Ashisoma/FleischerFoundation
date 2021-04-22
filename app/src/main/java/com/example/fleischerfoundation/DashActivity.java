@@ -76,7 +76,10 @@ public class DashActivity extends AppCompatActivity implements View.OnClickListe
                 menu.findItem(R.id.nav_profile).setVisible(true);
                 menu.findItem(R.id.nav_login).setVisible(false);
                 break;
-            case R.id.nav_logout: menu.findItem(R.id.nav_logout).setVisible(false);
+            case R.id.nav_logout:
+                Intent i = new Intent(DashActivity.this, LoginActivity.class);
+                startActivity(i);
+                menu.findItem(R.id.nav_logout).setVisible(false);
                 menu.findItem(R.id.nav_profile).setVisible(false);
                 menu.findItem(R.id.nav_login).setVisible(true);
                 break;

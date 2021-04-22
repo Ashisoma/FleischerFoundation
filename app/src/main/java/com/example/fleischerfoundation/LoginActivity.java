@@ -112,7 +112,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 mAuthProgressDialog.dismiss();
                 if (task.isSuccessful()) {
                     Toast.makeText(LoginActivity.this, "Authentication successful.", Toast.LENGTH_LONG).show();
-                    Intent intent = new Intent(LoginActivity.this, DashboardActivity.class);
+                    Intent intent = new Intent(LoginActivity.this, DashActivity.class);
                     startActivity(intent);
                     finish();
 

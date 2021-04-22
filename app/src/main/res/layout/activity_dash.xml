@@ -16,7 +16,6 @@
         android:layout_gravity="start"
         android:layout_height="match_parent"
         android:layout_width="wrap_content"
-        android:background="@color/white"
         app:headerLayout="@layout/header"
         app:menu="@menu/main_menu" />
     <ScrollView
@@ -24,8 +23,7 @@
         android:layout_height="match_parent">
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/white">
+            android:layout_height="match_parent">
 
             <androidx.appcompat.widget.Toolbar
                 android:layout_width="0dp"
@@ -41,15 +39,11 @@
                 />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:src="@drawable/logo1final"
-            android:layout_height="wrap_content"/>
-
-
     </ScrollView>
 
-
+<!--    <ImageView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:src="@drawable/logo1final"-->
+<!--        android:layout_height="match_parent"/>-->
 
 </androidx.drawerlayout.widget.DrawerLayout>
